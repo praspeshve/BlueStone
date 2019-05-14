@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
@@ -16,20 +15,17 @@ public class BlueStone2 {
 @Test
 	public  void Script2() {
 		// TODO Auto-generated method stub
-	
-	
-//	htmlReporter.config().setTheme(Theme.DARK);
-//	htmlReporter.config().setDocumentTitle("TestYantra Report");
-//	htmlReporter.config().setReportName("BlueStone Test Suite");
-	
-//	extent.setSystemInfo("Environment", "Test");
-//	extent.setSystemInfo("Engineer Name", "Prasanna");
-//	extent.setSystemInfo("Build_Number", "2.8");
-//	extent.setSystemInfo("Platform", "Windows");
 		System.setProperty("webdriver.chrome.driver", "E:\\webdriver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(new File("C:\\Users\\Pavan\\Desktop\\ExtentRepoerts\\extent.html"));
-		ExtentReports extent = new ExtentReports();	
+		ExtentReports extent = new ExtentReports();
+		htmlReporter.config().setTheme(Theme.DARK);
+		htmlReporter.config().setDocumentTitle("TestYantra Report");
+		htmlReporter.config().setReportName("BlueStone Test Suite");
+		extent.setSystemInfo("Environment", "Test");
+		extent.setSystemInfo("Engineer Name", "Prasanna");
+		extent.setSystemInfo("Build_Number", "2.8");
+		extent.setSystemInfo("Platform", "Windows");
 		extent.attachReporter(htmlReporter);
 		ExtentTest test = extent.createTest("BlueStone2");
 		//Verify Title
@@ -54,8 +50,6 @@ public class BlueStone2 {
 		driver.findElement(By.xpath("//div[@class='top-filter-blocks']//following::section[@id='Gender-form']//descendant::span[@data-displayname='women']//descendant::span[@class='items-count']")).getText();
 		test.log(Status.INFO,"Getting the count of rings");
 		System.out.println(count);
-		
-	
 		driver.close();
 		extent.flush();
 }
