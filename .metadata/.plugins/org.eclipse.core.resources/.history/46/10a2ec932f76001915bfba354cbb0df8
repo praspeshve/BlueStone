@@ -1,0 +1,25 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class BlueStone2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.gecko.driver", "E:\\webdriver\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();;
+		driver.get("https://www.bluestone.com");
+		driver.findElement(By.xpath("//input[@id='search_query_top_elastic_search']")).sendKeys("Rings");
+		driver.findElement(By.xpath("//input[@value='Search']")).click();
+		WebElement Gender = driver.findElement(By.xpath("//span[.='Gender']"));
+		Actions act = new Actions(driver);
+		act.moveToElement(Gender).click().perform();
+		String count = 
+		driver.findElement(By.xpath("//div[@class='top-filter-blocks']//following::section[@id='Gender-form']//descendant::span[@data-displayname='women']//descendant::span[@class='items-count']")).getText();
+		System.out.println(count);
+		driver.quit();
+	}
+
+}

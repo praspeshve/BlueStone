@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21644" started-at="2019-05-14T11:22:15Z" finished-at="2019-05-14T11:22:36Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="21644" started-at="2019-05-14T11:22:15Z" finished-at="2019-05-14T11:22:36Z">
+      <class name="BlueStone2">
+        <test-method status="PASS" signature="Script2()[pri:0, instance:BlueStone2@61832929]" name="Script2" duration-ms="21598" started-at="2019-05-14T11:22:15Z" finished-at="2019-05-14T11:22:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Script2 -->
+      </class> <!-- BlueStone2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

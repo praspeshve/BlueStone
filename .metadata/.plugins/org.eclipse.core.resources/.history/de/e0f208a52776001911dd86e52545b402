@@ -1,0 +1,3 @@
+KEY="webdriver.chrome.driver"
+VALUE="E:\\webdriver\\chromedriver.exe"
+URL="https://www.bluestone.com"

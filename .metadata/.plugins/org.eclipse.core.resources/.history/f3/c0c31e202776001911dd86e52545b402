@@ -1,0 +1,15 @@
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.testng.annotations.*;
+
+public class BlueStone1 {
+@BeforeTest
+public void Prop_File() throws IOException {
+	FileReader reader=new FileReader("config.properties");
+	Properties p = new Properties();
+	p.load(reader);
+	
+}
+}

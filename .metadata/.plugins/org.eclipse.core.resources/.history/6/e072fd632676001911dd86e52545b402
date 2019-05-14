@@ -1,0 +1,8 @@
+import org.testng.annotations.*;
+
+public class BlueStone1 {
+@BeforeTest
+public void Prop_File() {
+	
+}
+}

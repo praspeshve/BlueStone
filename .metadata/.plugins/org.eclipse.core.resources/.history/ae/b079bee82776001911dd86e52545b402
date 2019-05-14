@@ -1,0 +1,25 @@
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.*;
+
+public class BlueStone1 {
+@BeforeTest
+public void Prop_File() throws IOException {
+	FileReader reader=new FileReader(".\\softwares\\config.properties");
+	Properties p = new Properties();
+	p.load(reader);
+	reader.close();
+	System.setProperty(p.getProperty("KEY"), p.getProperty("VALUE"));
+	WebDriver driver = new ChromeDriver();
+	driver.get(p.getProperty("URL"));
+	driver.manage().window().maximize();
+}
+@Test
+public void Script1() {
+	System.out.println("hi");
+}
+}
