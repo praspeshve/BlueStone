@@ -48,7 +48,7 @@ public class BlueStone2 {
 		act.moveToElement(Gender).click().perform();
 		String count = 
 		driver.findElement(By.xpath("//div[@class='top-filter-blocks']//following::section[@id='Gender-form']//descendant::span[@data-displayname='women']//descendant::span[@class='items-count']")).getText();
-		test.log(Status.INFO,"Getting the count of rings");
+		test.log(Status.INFO,"Geting the count of rings");
 		System.out.println(count);
 		driver.close();
 		extent.flush();
